@@ -1,6 +1,6 @@
 var getPrime = module.exports = function(n){
 	var arrPrime = [];
-	for(var i = 1; i <= n ; i++){
+	for(var i = 2; i <= n ; i++){
 
         var isPrime = true;
         var q = Math.floor(Math.sqrt(n));
