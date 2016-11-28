@@ -1,4 +1,4 @@
-var getPrime = module.exports = function(n){
+var getPrimes = module.exports = function(n){
 	var arrPrime = [];
 	for(var i = 2; i <= n ; i++){
 
