@@ -11,8 +11,12 @@ function getPrimes(max) {
 
 function isPrime(n) {
     var start = 2;
+    if(n % start == 0 && n !== 2){
+            return false;
+        }
     while (start <= Math.sqrt(n)) {
-        if (n % start++ < 1) return false;
+        if (n % start++ < 1) {return false};
+        
     }
     return n > 1;
 }
