@@ -1,18 +1,21 @@
-var getPrimes = module.exports = function(n){
-	var arrPrime = [];
-	for(var i = 2; i <= n ; i++){
 
-        var isPrime = true;
-        var q = Math.floor(Math.sqrt(n));
-
-        for(var j = 2; j <= q; j++){
-            if(i % j === 0){
-                isPrime = false;
-            }
-        }
-        if(isPrime === true){
-            arrPrime.push(i);
+function getPrimes(max) {
+    var primes = [];
+    for(var i = 2; i <= max; i++){
+        if(isPrime(i)){
+            primes.push(i);
         }
     }
-    return arrPrime;
-};
+    return primes;
+}
+
+function isPrime(n) {
+    var start = 2;
+    while (start <= Math.sqrt(n)) {
+        if (n % start++ < 1) return false;
+    }
+    return n > 1;
+}
+
+module.exports = getPrimes;
+console.log(getPrimes(5));
